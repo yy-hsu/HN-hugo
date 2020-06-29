@@ -1,0 +1,42 @@
+{{ define "main"}}
+<main id="main">
+    <h1>{{ .Title}}</h1>
+    {{ if (eq .Site.Language.Lang "zh" )}}
+    <div class="item__meta">
+        {{ with .Params.author }}<span class="item__url">
+            作者：{{ . }}</span>
+        {{ end }}
+        {{ $title := .Title }}
+        {{ with .Params.download }}
+        <span class="item__url">
+            <a href="/{{ . }}{{ $title }}.txt" download="{{ $title }}.txt">
+                下载 TXT 版本
+            </a></span>
+        {{ end }}
+    </div>
+    {{ else}}
+    {{ if (eq .Site.Language.Lang "zht" )}}
+    <div class="item__meta">
+        {{ with .Params.author }}<span class="item__url">
+            作者：{{ . }}</span>
+        {{ end }}
+        {{ $title := .Title }}
+        {{ with .Params.download }}
+        <span class="item__url">
+            <a href="/{{ . }}zht/{{ $title }}.txt" download="{{ $title }}.txt">
+                下載 TXT 版本
+            </a></span>
+        {{ end }}
+    </div>
+    {{ end }}
+    {{ end }}
+    <ol>
+        {{ $paginator := .Paginate .Data.Pages 50 }}
+        {{ range $paginator.Pages }}
+        <li class="item"><a href="{{ .Permalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{end}}</a></li>
+        {{ end }}
+    </ol>
+
+    <nav class="pagination">{{ template "_internal/pagination.html" . }}</nav>
+</main>
+{{end}}

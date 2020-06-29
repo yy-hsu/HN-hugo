@@ -1,0 +1,14 @@
+# theme.toml template for a Hugo theme
+# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+
+name = "hn-hugo"
+license = "MIT"
+licenselink = "https://github.com/yiyang-hsu/hn-hugo/blob/master/LICENSE"
+description = "Hacker News style theme for Hugo."
+homepage = "https://github.com/yiyang-hsu/hn-hugo"
+tags = ["minimal", "forum like", "old"]
+min_version = "0.41"
+
+[author]
+  name = "Yiyang"
+  homepage = "yiyang-hsu.github.io"
