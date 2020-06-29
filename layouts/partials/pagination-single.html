@@ -1,0 +1,12 @@
+<nav class="pagination-single">
+    {{ if .NextInSection }}
+    <span class="previous">&larr;
+        <a href="{{ .NextInSection.Permalink }}" rel="prev">{{ .NextInSection.Title }}</a>
+    </span>
+    {{ end }}
+    <span><a href="../">回到上层</a></span>
+    {{ if .PrevInSection }}
+    <span class="next">
+        <a href="{{ .PrevInSection.Permalink }}" rel="next">{{ .PrevInSection.Title }}</a> &rarr;</span>
+    {{ end }}
+</nav>

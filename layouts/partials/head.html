@@ -1,0 +1,23 @@
+<head>
+    <title>{{ .Title | default .Site.Title }}</title>
+    {{- $styles := resources.Get "theme.scss" | resources.ExecuteAsTemplate "theme.scss" . | resources.ToCSS | resources.Minify }}
+    <link rel="stylesheet" href="{{ $styles.RelPermalink }}">
+    {{ with .Site.Params.css }}
+    {{ range . }}
+    <link rel="stylesheet" media="all" href={{ . }}>
+    {{ end }}
+    {{ end }}
+
+    {{- range .Translations }}
+    <link rel="alternate" hreflang="{{ .Language.Lang }}" href="{{ .Permalink }}" title="{{ .Title }}">
+    {{ end -}}
+    <link rel="canonical" href="{{ .Permalink }}" />
+    <link href="{{ .Site.BaseURL }}index.xml" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+    <meta charset=utf-8>
+    <meta name="viewport" content="width=device-width,user-scalable=no,maximum-scale=1,initial-scale=1">
+    <meta property="og:title" content="{{ .Title | default .Site.Title }}" />
+    {{ with .Page.Params.cover }}
+    <meta property="og:image" content="{{ . }}" />
+    {{ end }}
+    <meta property="og:description" content="{{ .Page.Summary}}" />
+</head>
