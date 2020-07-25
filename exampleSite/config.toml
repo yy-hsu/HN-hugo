@@ -3,7 +3,7 @@ defaultContentLanguage = "zh"
 disableHugoGeneratorInject = true
 enableGitInfo = false
 languageCode = "zh-cn"
-theme = "hn-hugo"
+theme = "HN-hugo"
 title = "Boy's Love"
 themesDir = "../../"
 
