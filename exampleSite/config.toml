@@ -1,10 +1,10 @@
-baseURL = "https://boys-love.club/"
+baseURL = "https://yiyang-hsu.github.io/HN-hugo"
 defaultContentLanguage = "zh"
 disableHugoGeneratorInject = true
 enableGitInfo = false
 languageCode = "zh-cn"
 theme = "HN-hugo"
-title = "Boy's Love"
+title = "HN-hugo Demo"
 themesDir = "../../"
 
 [languages]
