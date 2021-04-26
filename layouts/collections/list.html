@@ -6,10 +6,11 @@
             {{ T "author"}}: {{ . }}</span>
         {{ end }}
         {{ $title := .Title }}
+        {{ $code := .Site.Language.Lang }}
         {{ with .Params.download }}
         <span class="item__url">
-            <a href="/{{ . }}/{{ .Language.LanguageCode }}/{{ $title }}.txt" download="{{ $title }}.txt">
-                {{ T "download" }}
+            <a href="/{{ . }}{{ $code }}/{{ $title }}.txt" download="{{ $title }}.txt">
+                {{ T "download" "TXT" }}
             </a></span>
         {{ end }}
     </div>
