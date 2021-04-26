@@ -10,10 +10,10 @@ themesDir = "../../"
 [languages]
 
 [languages.zh]
-languageName = "繁體"
+languageName = "简体"
 weight = 2
 [languages.zht]
-languageName = "简体"
+languageName = "繁體"
 weight = 1
 [languages.en]
 languageName = "English"
