@@ -1,0 +1,14 @@
+home:
+  other: Home
+upper_level:
+  other: Upper Level
+not_found:
+  other: Not Found!
+author:
+  other: Author
+last_update:
+  other: Last Update
+anonymous:
+  other: Anonymous
+download:
+  other: Download {{ . }}

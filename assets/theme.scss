@@ -16,6 +16,11 @@ body {
   margin-bottom: 0.6rem;
 }
 
+pre {
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+
 p {
   margin: 0.5em 0;
 }

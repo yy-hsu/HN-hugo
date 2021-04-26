@@ -1,32 +1,23 @@
-baseURL = "https://yiyang-hsu.github.io/HN-hugo"
-defaultContentLanguage = "zh"
+baseURL = "https://yiyang-hsu.github.io/HN-hugo/"
+defaultContentLanguage = "en"
 disableHugoGeneratorInject = true
-enableGitInfo = false
-languageCode = "zh-cn"
+enableGitInfo = true
+pluralizeListTitles = true
 theme = "HN-hugo"
 title = "HN-hugo Demo"
 themesDir = "../../"
 
 [languages]
+
 [languages.zh]
 languageName = "繁體"
 weight = 2
 [languages.zht]
 languageName = "简体"
 weight = 1
-[languages.zht.params]
-js = []
-links = [
-  {name = "主頁", url = "/"},
-  {name = "博客", url = "/post/"},
-]
+[languages.en]
+languageName = "English"
+weight = 0
 
 [imaging]
 quality = 100
-
-[params]
-js = []
-links = [
-  {name = "主页", url = "/"},
-  {name = "博客", url = "/post/"},
-]

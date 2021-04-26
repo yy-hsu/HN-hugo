@@ -1,0 +1,14 @@
+home:
+  other: 主頁
+upper_level:
+  other: 回到上层
+not_found:
+  other: 不存在的页面！
+author:
+  other: 作者
+last_update:
+  other: 上次更新
+anonymous:
+  other: 匿名
+download:
+  other: 下载 {{ . }}

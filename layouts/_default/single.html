@@ -2,9 +2,9 @@
 <main id="main">
     <h1>{{ .Title }}</h1>
     <div class="item__meta">
-        <span class="item__url">作者: {{ .Params.author }}</span>
+        <span class="item__url">{{ T "author" }}: {{ .Params.author | default (T "anonymous") }}</span>
         {{ with .Params.date }}
-        <span class="item__url">上次更新: {{ .Format "Jan 2, 2006" }}</span>
+        <span class="item__url"> {{ T "last_update"}}: {{ .Format "Jan 2, 2006" }}</span>
         {{ end }}
     </div>
     {{- partial "pagination-single.html" . -}}

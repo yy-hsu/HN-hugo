@@ -4,7 +4,7 @@
         <a href="{{ .NextInSection.Permalink }}" rel="prev">{{ .NextInSection.Title }}</a>
     </span>
     {{ end }}
-    <span><a href="../">回到上层</a></span>
+    <span><a href="../">{{ i18n "upper_level" }}</a></span>
     {{ if .PrevInSection }}
     <span class="next">
         <a href="{{ .PrevInSection.Permalink }}" rel="next">{{ .PrevInSection.Title }}</a> &rarr;</span>

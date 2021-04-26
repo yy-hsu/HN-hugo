@@ -6,6 +6,12 @@
             {{ T "author"}}: {{ . }}</span>
         {{ end }}
         {{ $title := .Title }}
+        {{ with .Params.download }}
+        <span class="item__url">
+            <a href="/{{ . }}/{{ .Language.LanguageCode }}/{{ $title }}.txt" download="{{ $title }}.txt">
+                {{ T "download" }}
+            </a></span>
+        {{ end }}
     </div>
     <ol>
         {{ $paginator := .Paginate .Data.Pages 50 }}
@@ -13,6 +19,7 @@
         <li class="item"><a href="{{ .Permalink }}">{{ .Title }} {{ if .Draft }}:: DRAFT{{end}}</a></li>
         {{ end }}
     </ol>
+
     <nav class="pagination">{{ template "_internal/pagination.html" . }}</nav>
 </main>
 {{end}}
