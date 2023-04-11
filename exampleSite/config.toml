@@ -1,4 +1,4 @@
-baseURL = "https://yiyang-hsu.github.io/HN-hugo/"
+baseURL = "https://yy-hsu.github.io/HN-hugo/"
 defaultContentLanguage = "en"
 disableHugoGeneratorInject = true
 enableGitInfo = true
